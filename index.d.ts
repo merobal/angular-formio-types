@@ -12,8 +12,9 @@ export class BaseComponent extends Component {
 }
 
 export namespace Formio {
-  function registerComponent(type: string, controller: Object): void;
   namespace Components {
+    function addComponent(name: string, comp: Object): void;
+    function setComponent(name: string, comp: Object): void;
     namespace components {
       class base extends BaseComponent {}
     }
