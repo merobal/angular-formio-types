@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/merobal/angular-formio-types/issues"
   },
-  "homepage": "https://github.com/merobal/angular-formio-types#readme"
+  "homepage": "https://github.com/merobal/angular-formio-types#readme",
+  "dependencies": {
+    "@types/moment": "^2.13.0"
+  }
 }
