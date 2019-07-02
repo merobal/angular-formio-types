@@ -24,4 +24,5 @@ export namespace Formio {
 export namespace Utils {
   function getRandomComponentId(): string;
 }
+
 export type FormBuilder = any;
