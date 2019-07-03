@@ -1,4 +1,50 @@
-export interface Schema {
+export interface ConditionalOptions {
+  /** If the field should show if the condition is true */
+  show?: boolean;
+  /** The field API key that it should compare its value against to determine if the condition is triggered. */
+  when?: string;
+  /** The value that should be checked against the comparison component */
+  eq?: string;
+  /** The JSON Logic to determine if this component is conditionally available.
+   * Fyi: http://jsonlogic.com/
+   */
+  json?: Object;
+}
+
+export interface ValidateOptions {
+  /**
+   * If this component is required.
+   */
+  required?: boolean;
+
+  /**
+   * For text input, this checks the minimum length of text for valid input
+   */
+  minLength?: number;
+
+  /**
+   * For text input, this checks the maximum length of text for valid input
+   */
+  maxLength?: number;
+
+  /**
+   * For text input, this checks the text agains a Regular expression pattern.
+   */
+  pattern?: string;
+
+  /**
+   * A custom javascript based validation or a JSON object for using JSON Logic
+   */
+  custom?: string;
+
+  /**
+   * If the custom validation should remain private (only the backend will see it and execute it).
+   * !!! Not in the docs !!!
+   */
+  customPrivate?: boolean;
+}
+
+export interface Schema<T = any> {
   /**
    * The type of component
    */
@@ -53,7 +99,7 @@ export interface Schema {
   /**
    * The default value of this compoennt.
    */
-  defaultValue?: any;
+  defaultValue?: T;
 
   /**
    * If the value of this field should be cleared when it is conditionally hidden.
@@ -79,54 +125,12 @@ export interface Schema {
   /**
    * The validation criteria for this component.
    */
-  validate?: {
-    /**
-     * If this component is required.
-     */
-    required?: boolean;
-
-    /**
-     * For text input, this checks the minimum length of text for valid input
-     */
-    minLength?: number;
-
-    /**
-     * For text input, this checks the maximum length of text for valid input
-     */
-    maxLength?: number;
-
-    /**
-     * For text input, this checks the text agains a Regular expression pattern.
-     */
-    pattern?: string;
-
-    /**
-     * A custom javascript based validation or a JSON object for using JSON Logic
-     */
-    custom?: string;
-
-    /**
-     * If the custom validation should remain private (only the backend will see it and execute it).
-     * !!! Not in the docs !!!
-     */
-    customPrivate?: boolean;
-  };
+  validate?: ValidateOptions;
 
   /**
    * Determines when this component should be added to the form for both processing and input.
    */
-  conditional?: {
-    /** If the field should show if the condition is true */
-    show?: boolean;
-    /** The field API key that it should compare its value against to determine if the condition is triggered. */
-    when?: string;
-    /** The value that should be checked against the comparison component */
-    eq?: string;
-    /** The JSON Logic to determine if this component is conditionally available.
-     * Fyi: http://jsonlogic.com/
-     */
-    json?: Object;
-  };
+  conditional?: ConditionalOptions;
 
   /**
    * Allows customizable errors to be displayed for each component when an error occurs. This is an object with the following keys:
