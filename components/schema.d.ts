@@ -2,12 +2,12 @@ export interface ComponentSchema<T = any> {
   /**
    * The type of component
    */
-  type: string;
+  type?: string;
 
   /**
    * The data key for this component (how the data is stored in the database, referenced as API key in docs).
    */
-  key: string;
+  key?: string;
 
   /**
    * The HTML label to give this component.
