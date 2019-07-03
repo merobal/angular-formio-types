@@ -152,7 +152,7 @@ export interface ComponentSchema<T = any> {
   validateOn?: 'change' | 'blur';
 }
 
-export type ExtendedComponentSchema = ComponentSchema & { [key: string]: any };
+export type ExtendedComponentSchema<T = any> = ComponentSchema<T> & { [key: string]: any };
 
 export interface ConditionalOptions {
   /** If the field should show if the condition is true */
