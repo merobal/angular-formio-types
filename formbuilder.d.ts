@@ -1,2 +1,4 @@
+import { Form } from './form';
+
 // TODO
-export type FormBuilder = any;
+export class FormBuilder extends Form {}
