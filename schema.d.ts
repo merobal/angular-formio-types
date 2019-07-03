@@ -193,3 +193,5 @@ export interface Schema {
    */
   validateOn?: 'change' | 'blur';
 }
+
+export type ExtendedSchema = Schema & { [key: string]: any };

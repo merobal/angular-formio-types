@@ -1,5 +1,5 @@
-import { Schema } from './schema';
-export { Schema } from './schema';
+import { ExtendedSchema } from './schema';
+export { ExtendedSchema, Schema } from './schema';
 export * from './utils/utils';
 
 export class Component {
@@ -9,7 +9,7 @@ export class Component {
 
 export class BaseComponent extends Component {
   constructor(component: any, options: any, data: any);
-  static schema(...sources: any[]): Schema;
+  static schema(sources: ExtendedSchema): ExtendedSchema;
   static editForm: any;
   elementInfo(): any;
   createLabel(container: HTMLElement): void;
