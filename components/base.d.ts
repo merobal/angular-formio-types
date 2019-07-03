@@ -8,6 +8,15 @@ export interface ElementInfo {
   attr: Object;
 }
 
+export interface BuilderInfo {
+  title: string;
+  group: string;
+  icon: string;
+  documentation?: string;
+  weight?: number;
+  schema?: ExtendedComponentSchema;
+}
+
 export class BaseComponent extends Component {
   constructor(component: any, options: any, data: any);
   static schema(sources: ExtendedComponentSchema): ExtendedComponentSchema;
