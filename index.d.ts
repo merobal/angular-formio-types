@@ -1,3 +1,5 @@
+export * from './utils/utils';
+
 export class Component {
   constructor(options: Object, id: string);
   ce(type: string, attr?: Object, children?: any): HTMLElement;
@@ -19,10 +21,6 @@ export namespace Formio {
       class base extends BaseComponent {}
     }
   }
-}
-
-export namespace Utils {
-  function getRandomComponentId(): string;
 }
 
 export type FormBuilder = any;
