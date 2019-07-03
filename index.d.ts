@@ -1,5 +1,6 @@
 import { Schema } from './schema';
 export { Schema } from './schema';
+export * from './utils/utils';
 
 export class Component {
   constructor(options: Object, id: string);
@@ -22,10 +23,6 @@ export namespace Formio {
       class base extends BaseComponent {}
     }
   }
-}
-
-export namespace Utils {
-  function getRandomComponentId(): string;
 }
 
 export type FormBuilder = any;
