@@ -1,12 +1,21 @@
 import moment from 'moment';
 
+export * from './builder';
+export * from './formUtils';
 export type AnyForJSON = { [key: string]: any } | any; // WIP type
 
 export namespace Utils {
+  function evaluate(
+    func: any,
+    args: { component: any; form: any; instance: any; row: any; data: any } | any,
+    ret: any,
+    tokenize: any,
+  ): any;
   function getRandomComponentId(): string;
   function getPropertyValue(style: CSSStyleDeclaration, prop: string): number;
   function getElementRect(element: any): { x: number; y: number; width: number; height: number };
   function boolValue(value: boolean | string): boolean;
+  function isMongoId(text: any): any;
   function checkCalculated(component: { calculateValue?: any; key: any } | any, submission: any, rowData: any): void;
   function checkSimpleConditional(
     component: any /* unused */,
@@ -97,5 +106,5 @@ export namespace Utils {
   function unfold(e: any): any;
   const firstNonNil: any;
   function withSwitch(a: any, b: any): [Function, Function];
-  function observeOverload(callback: Function, options?: { limit?: number; delay?: number });
+  function observeOverload(callback: Function, options?: { limit?: number; delay?: number }): any;
 }

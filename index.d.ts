@@ -1,4 +1,4 @@
-export * from './utils';
+export * from './utils/utils';
 
 export class Component {
   constructor(options: Object, id: string);
