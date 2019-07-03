@@ -1,3 +1,6 @@
+import { Schema } from './schema';
+export { Schema } from './schema';
+
 export class Component {
   constructor(options: Object, id: string);
   ce(type: string, attr?: Object, children?: any): HTMLElement;
@@ -5,7 +8,7 @@ export class Component {
 
 export class BaseComponent extends Component {
   constructor(component: any, options: any, data: any);
-  static schema(...sources: any[]): any;
+  static schema(...sources: any[]): Schema;
   static editForm: any;
   elementInfo(): any;
   createLabel(container: HTMLElement): void;
