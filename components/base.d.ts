@@ -132,7 +132,7 @@ export class BaseComponent extends Component {
   };
   addCKE(element: HTMLElement | any, settings: Object, onChange: (input: any) => any): any;
   addQuill(element: HTMLElement | any, settings: Object, onChange: (input: any) => any): any;
-  readonly emptyValue: null;
+  readonly emptyValue: any;
   hasValue(data: Object): boolean;
   readonly value: any;
   readonly rootValue: any;
