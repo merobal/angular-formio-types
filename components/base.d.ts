@@ -21,13 +21,14 @@ export interface BuilderInfo {
 export class BaseComponent extends Component {
   static schema(sources: ExtendedComponentSchema): ExtendedComponentSchema;
   static tableView(value: any, options: any): void;
+  static editForm(): { components: ExtendedComponentSchema[] };
   constructor(component: Object, options: Object, data: Object);
   readonly hasInput: any;
-  readonly defaultSchema: any;
+  readonly defaultSchema: ComponentSchema;
   readonly key: any;
   public currentForm: any;
-  getModifiedSchema(schema: ComponentSchema, defaultSchema: ComponentSchema): ComponentSchema;
-  readonly schema: ComponentSchema;
+  getModifiedSchema(schema: ExtendedComponentSchema, defaultSchema: ComponentSchema): ExtendedComponentSchema;
+  readonly schema: ExtendedComponentSchema;
   t(text: string, params: Object): any;
   performInputMapping(input: any): any;
   getBrowserLanguage(): string | null;
