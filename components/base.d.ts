@@ -1,6 +1,5 @@
 import { Component } from '../component';
-import { ExtendedComponentSchema } from './schema';
-import { ComponentSchema } from './schema.d';
+import { ComponentSchema, ExtendedComponentSchema } from './schema';
 
 export interface ElementInfo {
   type: string;
