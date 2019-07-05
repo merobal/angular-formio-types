@@ -3,7 +3,7 @@ export class Component {
   on(event: string, cb: Function, internal: boolean): any;
   off(event: string): void;
   emit(event: string, data: Object): void;
-  addEventListener(obj: HTMLElement, type: string, func: Function, persistent: boolean): any;
+  addEventListener(obj: HTMLElement, type: string, func: Function, persistent?: boolean): any;
   removeEventListener(obj: Object, type: any): any;
   destroy(full: boolean): void;
   appendTo(element: any, container: any): any;

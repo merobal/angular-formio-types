@@ -22,10 +22,12 @@ export class BaseComponent extends Component {
   static tableView(value: any, options: any): void;
   static editForm(): { components: ExtendedComponentSchema[] };
   constructor(component: Object, options: Object, data: Object);
+  readonly info: ElementInfo;
   readonly hasInput: any;
   readonly defaultSchema: ComponentSchema;
   readonly key: any;
   public currentForm: any;
+  public errorContainer: any;
   getModifiedSchema(schema: ExtendedComponentSchema, defaultSchema: ComponentSchema): ExtendedComponentSchema;
   readonly schema: ExtendedComponentSchema;
   t(text: string, params: Object): any;
@@ -90,7 +92,7 @@ export class BaseComponent extends Component {
   addPrefix(input: HTMLElement, inputGroup: HTMLElement): HTMLElement;
   addSuffix(input: HTMLElement, inputGroup: HTMLElement): HTMLElement;
   addInputGroup(input: HTMLElement, container: HTMLElement): HTMLElement;
-  setInputMask(input: HTMLElement, inputMask: string): void;
+  setInputMask(input: HTMLElement, inputMask?: string): void;
   createInput(container: HTMLElement): HTMLElement;
   readonly widget: any;
   createWidget(): any;
