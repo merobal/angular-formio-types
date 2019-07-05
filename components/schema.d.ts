@@ -198,4 +198,27 @@ export interface ValidateOptions {
    * !!! Not in the docs !!!
    */
   customPrivate?: boolean;
+
+  /**
+   * Minimum value for numbers
+   */
+  min?: number;
+
+  /**
+   * Maximum value for numbers
+   */
+  max?: number;
+
+  minSelectedCount?: number;
+  maxSelectedCount?: number;
+  minWords?: number;
+  maxWords?: number;
+  email?: boolean;
+  url?: boolean;
+  date?: boolean;
+  day?: boolean;
+  json?: string;
+  mask?: boolean;
+  minDate?: any;
+  maxDate?: any;
 }
