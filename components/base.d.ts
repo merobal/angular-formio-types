@@ -1,5 +1,5 @@
 import { Component } from '../component';
-import { ComponentSchema, ExtendedComponentSchema } from './schema';
+import { ComponentSchema, ExtendedComponentSchema, ValidateOptions } from './schema';
 
 export interface ElementInfo {
   type: string;
@@ -26,6 +26,7 @@ export class BaseComponent extends Component {
   readonly hasInput: any;
   readonly defaultSchema: ComponentSchema;
   readonly key: any;
+  public validators: (keyof ValidateOptions)[];
   public calculatedValue: any;
   public currentForm: any;
   public errorContainer: any;
