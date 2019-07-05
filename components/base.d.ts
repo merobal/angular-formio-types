@@ -26,6 +26,7 @@ export class BaseComponent extends Component {
   readonly hasInput: any;
   readonly defaultSchema: ComponentSchema;
   readonly key: any;
+  public calculatedValue: any;
   public currentForm: any;
   public errorContainer: any;
   getModifiedSchema(schema: ExtendedComponentSchema, defaultSchema: ComponentSchema): ExtendedComponentSchema;
