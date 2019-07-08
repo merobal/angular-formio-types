@@ -191,11 +191,10 @@ export interface ValidateOptions {
   /**
    * A custom javascript based validation or a JSON object for using JSON Logic
    */
-  custom?: string;
+  custom?: any;
 
   /**
    * If the custom validation should remain private (only the backend will see it and execute it).
-   * !!! Not in the docs !!!
    */
   customPrivate?: boolean;
 
