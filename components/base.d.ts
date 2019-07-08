@@ -26,6 +26,7 @@ export class BaseComponent extends Component {
   readonly hasInput: any;
   readonly defaultSchema: ComponentSchema;
   readonly key: any;
+  public element: any;
   public validators: (keyof ValidateOptions)[];
   public calculatedValue: any;
   public currentForm: any;

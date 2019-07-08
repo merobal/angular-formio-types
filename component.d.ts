@@ -30,5 +30,5 @@ export class Component {
     ret: any,
     tokenize: any,
   ): any;
-  hook(): any;
+  hook(...args: any): any;
 }
