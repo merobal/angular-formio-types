@@ -32,6 +32,7 @@ export class BaseComponent extends Component {
   public currentForm: any;
   public errorContainer: any;
   public options: any;
+  public labelElement: any;
   getModifiedSchema(schema: ExtendedComponentSchema, defaultSchema: ComponentSchema): ExtendedComponentSchema;
   readonly schema: ExtendedComponentSchema;
   t(text: string, params: Object): any;
