@@ -28,7 +28,7 @@ export class Component {
     func: any,
     args: { component: any; form: any; instance: any; row: any; data: any } | any,
     ret: any,
-    tokenize: any,
+    tokenize?: any,
   ): any;
   hook(...args: any): any;
 }

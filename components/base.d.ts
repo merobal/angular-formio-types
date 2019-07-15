@@ -31,6 +31,7 @@ export class BaseComponent extends Component {
   public calculatedValue: any;
   public currentForm: any;
   public errorContainer: any;
+  public options: any;
   getModifiedSchema(schema: ExtendedComponentSchema, defaultSchema: ComponentSchema): ExtendedComponentSchema;
   readonly schema: ExtendedComponentSchema;
   t(text: string, params: Object): any;
