@@ -7,7 +7,7 @@ export namespace Utils {
     func: any,
     args: { component: any; form: any; instance: any; row: any; data: any } | any,
     ret: any,
-    tokenize: any,
+    tokenize?: any,
   ): any;
   function getRandomComponentId(): string;
   function getPropertyValue(style: CSSStyleDeclaration, prop: string): number;
