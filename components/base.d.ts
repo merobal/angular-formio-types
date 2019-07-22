@@ -5,7 +5,7 @@ export interface ElementInfo {
   type: string;
   component: ExtendedComponentSchema;
   changeEvent: string;
-  attr: Object;
+  attr: any;
 }
 
 export interface BuilderInfo {
