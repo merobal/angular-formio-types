@@ -91,7 +91,7 @@ export class BaseComponent extends Component {
   addShortcutToLabel(label: string, shortcut: string | RegExp): string;
   addShortcut(element: any, shortcut: any): void;
   removeShortcut(element: any, shortcut: any): void;
-  createTooltip(container: HTMLElement, component: any, classes: string): void;
+  createTooltip(container: HTMLElement, component?: any, classes?: string): void;
   createDescription(container: HTMLElement | any): void;
   createErrorElement(): void;
   addPrefix(input: HTMLElement, inputGroup: HTMLElement): HTMLElement;
