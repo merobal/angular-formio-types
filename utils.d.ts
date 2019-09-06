@@ -3,6 +3,7 @@ import * as moment from 'moment';
 export type AnyForJSON = { [key: string]: any } | any; // WIP type
 
 export namespace Utils {
+  const Evaluator: any;
   function evaluate(
     func: any,
     args: { component: any; form: any; instance: any; row: any; data: any } | any,
