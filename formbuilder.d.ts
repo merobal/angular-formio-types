@@ -1,4 +1,7 @@
 import { Form } from './form';
 
 // TODO
-export class FormBuilder extends Form {}
+export class FormBuilder extends Form {
+  constructor(element: any, form: any, options: any);
+  create(display: string): any;
+}
