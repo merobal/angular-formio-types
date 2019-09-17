@@ -1,5 +1,6 @@
-// TODO
-export class Form {
+import { Element } from './element';
+
+export class Form extends Element {
   form: any;
   instance: any; //?
   constructor(...args: any);

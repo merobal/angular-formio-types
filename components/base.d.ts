@@ -1,4 +1,3 @@
-import { Component } from '../component';
 import { ComponentSchema, ExtendedComponentSchema, ValidateOptions } from './schema';
 
 export interface ElementInfo {
@@ -17,7 +16,7 @@ export interface BuilderInfo {
   schema?: ExtendedComponentSchema;
 }
 
-export class BaseComponent extends Component {
+export class BaseComponent {
   static schema(sources: ExtendedComponentSchema): ExtendedComponentSchema;
   static tableView(value: any, options: any): void;
   static editForm(): { components: ExtendedComponentSchema[] };
