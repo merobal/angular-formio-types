@@ -1,11 +1,12 @@
+import { Element } from '../../../element';
 import { ElementInfo } from './../../base.d';
 import { ComponentSchema, ExtendedComponentSchema, ValidateOptions } from './../../schema.d';
 
-export class BaseComponent {
+export class Component extends Element {
   static schema(sources: ExtendedComponentSchema): ExtendedComponentSchema;
   static tableView(value: any, options: any): void;
   constructor(component: Object, options: Object, data: Object);
-  public originalComponent: any | BaseComponent;
+  public originalComponent: any | Component;
   public refs: Object;
   public attached: boolean;
   public rendered: boolean;
@@ -138,7 +139,7 @@ export class BaseComponent {
   updateOnChange(flags: any, changed: boolean | any): boolean;
   calculateValue(data: Object, flags: any): boolean;
   public label: any | string;
-  getRoot(): BaseComponent;
+  getRoot(): Component;
   invalidMessage(data: any, dirty: boolean, ignoreCondition?: boolean): any;
   isValid(data: any, dirty: boolean): boolean;
   checkValidity(data: any, dirty: any | boolean, rowData: any): boolean;
@@ -172,56 +173,3 @@ export class BaseComponent {
   public options: any;
   public labelElement: any;
 }
-
-// public errorContainer: any;
-// viewOnlyBuild(): void;
-// createViewOnlyLabel(container: any): void;
-// createViewOnlyValue(container: any): void;
-// setupValueElement(element: any): void;
-// updateViewOnlyValue(): void;
-// createElement(): HTMLElement;
-// createWrapper(): boolean;
-// addNewValue(value: any): void;
-// addValue(): void;
-// buildRows(values: any): void;
-// readonly allowReorder: boolean;
-// addDraggable(containers: Element[]): void;
-// getRowDragulaOptions(): { moves: (draggedElement: any, oldParent: any, clickedElement: any) => any };
-// onRowDrop(droppedElement: any, newParent: any, oldParent: any, nextSibling: any): void;
-// buildInput(container: HTMLElement, value: any): void;
-// addButton(justIcon: boolean): HTMLElement;
-// removeButton(index: number): HTMLElement;
-// dragButton(): HTMLElement;
-// labelOnTheLeft(position: string): boolean;
-// labelOnTheRight(position: string): boolean;
-// rightAlignedLabel(position: string): boolean;
-// labelOnTheLeftOrRight(position: string): boolean;
-// getLabelWidth(): number;
-// getLabelMargin(): number;
-// setInputStyles(input: any): void;
-// createLabel(container: HTMLElement): void;
-// addShortcutToLabel(label: string, shortcut: string | RegExp): string;
-// createTooltip(container: HTMLElement, component?: any, classes?: string): void;
-// createDescription(container: HTMLElement | any): void;
-// createErrorElement(): void;
-// addPrefix(input: HTMLElement, inputGroup: HTMLElement): HTMLElement;
-// addSuffix(input: HTMLElement, inputGroup: HTMLElement): HTMLElement;
-// addInputGroup(input: HTMLElement, container: HTMLElement): HTMLElement;
-// setInputMask(input: HTMLElement, inputMask?: string): void;
-// createInput(container: HTMLElement): HTMLElement;
-// readonly widget: any;
-// createWidget(): any;
-// destroyInputs(): void;
-// destroy(): any;
-// renderElement(template: any, data: any, actions?: any[]): ChildNode;
-// renderTemplateToElement(element: any, template: any, data: any, actions?: any[]): any;
-// attachActions(element: any, actions: any[]): void;
-// show(show: boolean, noClear: boolean): boolean;
-// showElement(element: any, show: boolean): boolean;
-// addInputSubmitListener(input: any): void;
-// addInputEventListener(input: any): void;
-// addInput(input: any, container: any): any;
-// addFocusBlurEvents(element: any): void;
-// readonly value: any;
-// updateValue(flags: any, value: any): any;
-// getFlags(): any;
