@@ -7,6 +7,7 @@ export interface ElementInfo {
   changeEvent: string;
   attr: any;
 }
+
 export class Component extends Element {
   static schema(sources: ExtendedComponentSchema): ExtendedComponentSchema;
   static tableView(value: any, options: any): void;

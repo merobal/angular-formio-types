@@ -1,8 +1,7 @@
 import { Field } from '../field/field';
 import { Component } from './../component/component.d';
 
-export default class NestedComponent extends Field {
-  static schema(...extend: any): any;
+export class NestedComponent extends Field {
   constructor(component: any | Component, options: Object, data: any);
   readonly defaultSchema: any;
   readonly schema: any;

@@ -2,9 +2,8 @@ import { Component } from '../component/component';
 import { Multivalue } from '../multivalue/multivalue';
 import { Element } from './../../../element.d';
 
-export default class Input extends Multivalue {
+export class Input extends Multivalue {
   constructor(component: Component | any, options: Object, data: any);
-  static schema(...extend: any): any;
   readonly inputInfo: {
     id: string | number;
     type: string;
