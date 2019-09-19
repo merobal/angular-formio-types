@@ -74,9 +74,9 @@ export class Formio {
   canSubmit(): any;
   getUrlParts(url: any): any;
   static getUrlParts(url: any, formio: Formio): any;
-  static serialize(obj: any, _interpolate): any;
+  static serialize(obj: any, _interpolate: any): any;
   static getRequestArgs(formio: Formio, type: string, url: string, method: string, data: any, opts: any): any;
-  static request(url: any, method: any, data: any, header: any, opts): any;
+  static request(url: any, method: any, data: any, header: any, opts: any): any;
   static setToken(token: string, opts: any): any;
   static getUser(options: Object): any;
   static getBaseUrl(): string;

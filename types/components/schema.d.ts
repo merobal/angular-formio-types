@@ -222,6 +222,13 @@ export interface ValidateOptions {
   maxDate?: any;
 }
 
+export interface ElementInfo {
+  type: string;
+  component: ExtendedComponentSchema;
+  changeEvent: string;
+  attr: any;
+}
+
 export interface BuilderInfo {
   title: string;
   group: string;

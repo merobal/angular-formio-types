@@ -1,12 +1,5 @@
 import { Element } from '../../../element';
-import { ComponentSchema, ExtendedComponentSchema, ValidateOptions } from './../../schema.d';
-
-export interface ElementInfo {
-  type: string;
-  component: ExtendedComponentSchema;
-  changeEvent: string;
-  attr: any;
-}
+import { ComponentSchema, ElementInfo, ExtendedComponentSchema, ValidateOptions } from './../../schema.d';
 
 export class Component extends Element {
   static schema(sources: ExtendedComponentSchema): ExtendedComponentSchema;
