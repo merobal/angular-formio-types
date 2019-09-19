@@ -221,3 +221,12 @@ export interface ValidateOptions {
   minDate?: any;
   maxDate?: any;
 }
+
+export interface BuilderInfo {
+  title: string;
+  group: string;
+  icon: string;
+  documentation?: string;
+  weight?: number;
+  schema?: ExtendedComponentSchema;
+}

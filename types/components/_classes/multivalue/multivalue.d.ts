@@ -5,7 +5,6 @@ export class Multivalue extends Field {
   readonly defaultValue: any;
   readonly addAnother: any;
   useWrapper(): boolean;
-  render(): any;
   renderRow(value: any, index: any): any;
   attach(dom: any): any;
   attachElement(element: any, index: number | string): any;

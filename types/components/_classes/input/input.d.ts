@@ -8,7 +8,7 @@ export class Input extends Multivalue {
     id: string | number;
     type: string;
     changeEvent: string;
-    content: any;
+    content?: any;
     attr: any;
   };
   readonly maskOptions: { label: any; value: any }[];
