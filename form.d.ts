@@ -2,7 +2,6 @@ import { Element } from './element';
 
 export class Form extends Element {
   form: any;
-  instance: any; //?
   constructor(...args: any);
   create(display: 'wizard' | 'form' | 'pdf'): any;
   setForm(formParam: any): any;

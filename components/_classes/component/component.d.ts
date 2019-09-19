@@ -1,7 +1,12 @@
 import { Element } from '../../../element';
-import { ElementInfo } from './../../base.d';
 import { ComponentSchema, ExtendedComponentSchema, ValidateOptions } from './../../schema.d';
 
+export interface ElementInfo {
+  type: string;
+  component: ExtendedComponentSchema;
+  changeEvent: string;
+  attr: any;
+}
 export class Component extends Element {
   static schema(sources: ExtendedComponentSchema): ExtendedComponentSchema;
   static tableView(value: any, options: any): void;
