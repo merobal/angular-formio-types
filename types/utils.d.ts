@@ -106,6 +106,8 @@ export namespace Utils {
   const firstNonNil: any;
   function withSwitch(a: any, b: any): [Function, Function];
   function observeOverload(callback: Function, options?: { limit?: number; delay?: number }): any;
+  function getContextComponents(context: any): any;
+  function sanitize(string: string, options: any): any;
 
   // Form Utils
   function isLayoutComponent(component: { columns: any; rows: any; components: any } | any): boolean;
