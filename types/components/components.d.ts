@@ -14,11 +14,11 @@ export namespace Components {
   function addComponent(name: string, comp: Object): void;
   function create(component: Object, options: Object, data?: any): Object;
   namespace components {
-    const base: typeof Component;
-    const input: typeof Input;
-    const nested: typeof NestedComponent;
-    const multivalue: typeof Multivalue;
-    const field: typeof Field;
+    class base extends Component {}
+    class input extends Input {}
+    class nested extends NestedComponent {}
+    class multivalue extends Multivalue {}
+    class field extends Field {}
 
     const address: ClassWithEditForm<typeof WidgetComponent>;
     const button: ClassWithEditForm<typeof Field>;
